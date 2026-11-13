@@ -19,21 +19,21 @@ public class Workshop {
         if(studentID == null|| studentID.isEmpty()){
             return "blank";
         }
-
-        studentID = studentID.trim();
-        studentID = studentID.toLowerCase();
-
-        if(studentIds.contains(studentID)){
+        else if(studentIds.contains(studentID)){
             return "duplicate";
         }
-
-        if(studentIds.size() > capacity){
-            return "full";
+        else if(capacity<=studentIds.size()){
+            return"full";
         }
+        else{
+            return "registered";
+        }
+    }
 
+    public void addStudent(String studentID){
+        studentID = studentID.trim();
+        studentID = studentID.toLowerCase();
         studentIds.add(studentID);
-
-        return "registered";
     }
 
     public void displayRegistrations(){
@@ -50,5 +50,14 @@ public class Workshop {
 
     public String getWorkshopName() {
         return workshopName;
+    }
+
+    public void printStudents(){
+        int k=1;
+        for (String studentId : studentIds) {
+            System.out.println("Student #"+k);
+            System.out.println(studentId);
+            k++;
+        }
     }
 }
