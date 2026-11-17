@@ -37,7 +37,6 @@ public class Main {
             switch(result){
                 case "registered":
                     System.out.println("Student "+studentIds +" was registered");
-                    i++;
                     break;
                 case "duplicate":
                     System.out.println("Student already registered");
@@ -54,13 +53,14 @@ public class Main {
                 default:
                     break;
             }
+            i++;
         }
 
         System.out.println(workshop.getWorkshopName());
 
-        for(int j=0;j< workshop.totalRegistrations();j++) {
-            workshop.displayRegistrations();
-        }
+
+        workshop.displayRegistrations();
+
 
         System.out.println("Total number of registrations accepted: " + workshop.totalRegistrations());
         System.out.println("Total number of registrations rejected: " + rejected);

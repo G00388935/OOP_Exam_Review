@@ -2,28 +2,57 @@
 
 ## 1. My Original Examination Grade
 
-### Task 1 — /40
+### Task 1 — 35/40
 **My mark:**
 
 **Why I awarded this mark:**
+I did create a workshop class with name,capacity and hashset to store student IDs.
+i also made the correct constructor for each.
+in main i had a scanner to read the workshop name and capacity and made the workshop object.
 
-### Task 2 — /40
+### Task 2 — 12/40
 **My mark:**
 
 **Why I awarded this mark:**
+i did write that a hashset doesn't store duplicates already so i understood its usse
+however i didnt actually have something else to check if i had someone registered before
+accepting it.
+i did have an addStudent method in my work shop the problem was it want used.
+i had set up a loop in main but didnt finish setting up the way to process student ids in it.
 
-### Task 3 — /20
+
+### Task 3 — 2/20
 **My mark:**
 
 **Why I awarded this mark:**
+i created a hashset to store student ids but i didnt complete the report or validation.
+i didnt add methods to calculate the total registrations, display those registrations or calculate the remaining spaces.
+i didnt add a validation for blank ids at all.
 
-**Total self-assessed grade:** /100
+
+**Total self-assessed grade:** 49/100
 
 ## 2. Corrections and Improvements
 
 Describe two or three important problems you identified
 in your original code. Explain what you changed and
 why it works now.
+
+my fields weren't properly encapsulated, hashset was wrong.
+studentIds wasn't private so other classes could modify the hashset.
+
+private HashSet<String> studentIds;
+
+my addStudent wasn't finished so it was not used.
+it also had no duplicate checks or whether workshop was full.
+
+i should have passed the studentID from main to the register student method using a parameter.
+i had to add a check for blank ids,duplicates and capacity before adding student.
+im not sure if it's the best method but i have it returning a string to tell main if registration worked.
+
+my loop only displayed registration number and was completely unfinished it didn't ask for ids or process the registration.
+
+i had to add the registerStudent method in the loop that takes the scanner input so the workshop class processes it.
 
 ## 3. Reflection
 
@@ -36,9 +65,53 @@ from correcting your code?**
 **What would you do differently in your next
 coding test?**
 
+
+I understood that a HashSet could be used to prevent duplicate student IDs because it does not allow duplicate values. 
+I also understood that I needed to use methods in my Workshop class to handle registrations.
+
+However, I struggled with connecting the Scanner input in Main.java to the methods in Workshop.java as i failed to set up 
+hashset right, i got caught up in it and failed to move on with attempting other tasks even with hashset not working.
+
+the most important thing i learned was how to properly set up and use a hashset so i can pass information 
+between classes using method parameters instead of creating another Scanner inside my Workshop class.
+
+In my next coding test, I would try not to spend too much time stuck on one problem. If I was having difficulty with something like setting up a HashSet,
+I would move on to another part of the assignment and come back to it later. I would also test smaller parts of my code individually before trying to complete the whole program.
+
 ---
 
 ## Review lab assessment and mark recovery
+
+What is the name of your Workshop
+tech
+How big is the capacity?
+3
+How many registrations do you want?
+4
+workshop name: tech
+Capacity: 3
+Number of registration attempts: 4
+Registration #1
+kane
+Student kane was registered
+Registration #2
+kane
+Student already registered
+Registration #3
+
+Student cant register as blank
+Registration #4
+mark
+Student mark was registered
+tech
+[mark, kane]
+Total number of registrations accepted: 2
+Total number of registrations rejected: 2
+1
+
+this is an example run of the corrected program.
+
+
 
 The **review lab** is graded separately out of 20 marks:
 

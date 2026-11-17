@@ -1,7 +1,7 @@
 package ie.atu;
 
 import java.util.HashSet;
-import java.util.Set;
+
 
 
 public class Workshop {
@@ -27,7 +27,7 @@ public class Workshop {
             return "duplicate";
         }
 
-        if(studentIds.size() > capacity){
+        if(studentIds.size() >= capacity){
             return "full";
         }
 
