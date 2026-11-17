@@ -109,7 +109,7 @@ Total number of registrations accepted: 2
 Total number of registrations rejected: 2
 1
 
-this is an example run of the corrected program.
+this is an example run of the correct program.
 
 
 
